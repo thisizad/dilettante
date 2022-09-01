@@ -1,4 +1,0 @@
-baseURL = 'https://astonishing-manatee-35a602.netlify.app/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = 'hugo-coder'
