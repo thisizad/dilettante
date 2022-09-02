@@ -25,7 +25,7 @@ languages:
       series: series
     menu:
       main:
-        - name: Archive
+        - name: Archives
           url: archives/
           weight: 5
         - name: Search
@@ -64,28 +64,9 @@ params:
   showtoc: true
   tocopen: false
 
-  profileMode:
-    enabled: true # needs to be explicitly set
-    title: Dilettante
-    subtitle: "This is Dilettante's Blog"
-    # imageUrl: "<img location>"
-    # imageWidth: 120
-    # imageHeight: 120
-    # imageTitle: my image
-    buttons:
-      - name: Archives
-        url: archives
-      - name: Tags
-        url: tags
-
   homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog
-
-  # cover:
-  #   hidden: true # hide everywhere but not in structured data
-  #   hiddenInList: true # hide on list pages and home
-  #   hiddenInSingle: true # hide on single page
+    Title: "About Dilettante"
+    Content: A senior majored in software engineering. A junior developer dedicateed in front-end
 
   socialIcons:
     - name: twitter
@@ -95,17 +76,22 @@ params:
     - name: github
       url: "https://github.com/"
 
-# menu:
-#   main:
-#     - identifier: categories
-#       name: categories
-#       url: /categories/
-#       weight: 10
-#     - identifier: tags
-#       name: tags
-#       url: /tags/
-#       weight: 20
-#     - identifier: example
-#       name: example.org
-#       url: "https://dilettante.netlify.app"
-#       weight: 30
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+  # cover:
+  #   hidden: true # hide everywhere but not in structured data
+  #   hiddenInList: true # hide on list pages and home
+  #   hiddenInSingle: true # hide on single page
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # is necessary
